@@ -150,8 +150,9 @@ else:
 
 # Testing, packaging.
 if is_python_build:
+    # Run Python lint checks
     run_command(pip + ' install pycodestyle pylint mypy')
-    run_command(pycodestyle + ' pykep/')
+    run_command('pycodestyle pykep/')
     # Run the Python tests.
     run_command(
         pinterp + r' -c "from pykep import test; test.run_test_suite();"')
