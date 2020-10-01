@@ -52,7 +52,7 @@ def algo_factory(name, original_screen_output=True):
             pl = 5
         else:
             pl = 0
-        uda = pg.ipopt()
+        uda = pg.ipopt()  # pylint: disable=no-member
         uda.set_integer_option("print_level", pl)
         uda.set_integer_option("acceptable_iter", 4)
         uda.set_integer_option("max_iter", 150)
